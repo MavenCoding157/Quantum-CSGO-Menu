@@ -20,7 +20,14 @@
 ![Screenshot 2023-09-09 024131](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/edaac35b-4cc6-4cec-b2f5-fc78b3b79844)
 
 
-**IMPORTANT**
+# **UPDATE LOG**
+
+09/09/2023: added aimbot, other basic changes 
+
+08/09/2023: Uploaded to Gitub  
+
+
+# **IMPORTANT**
 
 I do not recommend this cheat for rage cheating or ect. This is only designed for legit cheating.
 
@@ -32,17 +39,20 @@ This is my first/second Cheat so it may have some bugs, but i will work to fix t
 
 Also please note that I have assigned the launch csgo folder path to where I have csgo saved so you might need to re-assign the path your location if you wanna use that feature. 
 
-**TO RUN THE FILE**
+
+# **TO RUN THE FILE**
 
 To run the file simply open it in visual studio and set it to 'Release' and 'x86' then just build it and it should work perfectly
 
-**SPECIAL THANK YOU**
+
+# **SPECIAL THANK YOU**
 
 Thank you to cazz link below as i made the menu myself but i implemented his menus style onto mine
 
 Link to original menu style: https://github.com/cazzwastaken/externalia
 
-**WHAT THE MENU CAN DO**
+
+# **WHAT THE MENU CAN DO**
 
 • ESP (with custom colours) ✔️
 
@@ -75,12 +85,12 @@ Link to original menu style: https://github.com/cazzwastaken/externalia
 • Aimbot ✔️
 
 
-**THE CHEAT MENU IN ACTION**
+# **THE CHEAT MENU IN ACTION**
 
 ![Screenshot (58)](https://user-images.githubusercontent.com/117538886/213336510-41881677-32e2-4816-a336-14f2a4f744e0.png)
 
 
-**AND LAST THING!!!**
+# **AND LAST THING!!!**
 
                       SUB TO MY CHANNEL
 ==================================================
