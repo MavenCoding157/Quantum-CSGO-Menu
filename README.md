@@ -1,5 +1,4 @@
 # Quantum-CSGO-Menu
-Quantum CSGO Menu is an improved version of ShooterZ Menu
 
 **DISCLAIMER I DO NOT CONDONE THE USE OF CHEATS. THIS JUST SHOWS HOW CHEATS WORK**
 
