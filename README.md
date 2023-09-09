@@ -20,6 +20,13 @@
 ![Screenshot 2023-09-09 024131](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/edaac35b-4cc6-4cec-b2f5-fc78b3b79844)
 
 
+# **UPDATE LOG**
+
+09/09/2023: added aimbot, other basic changes 
+
+08/09/2023: Uploaded to Gitub  
+
+
 **IMPORTANT**
 
 I do not recommend this cheat for rage cheating or ect. This is only designed for legit cheating.
