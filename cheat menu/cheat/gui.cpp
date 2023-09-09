@@ -348,10 +348,11 @@ static bool circleshowing = true;//del
 static bool fovcircle = false;//del
 static float circlesize = 450;
 
+
 //game launch code
 std::string FindCSGOPath() {
 	// Default Steam installation path
-	const char* steamPath = "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Counter-Strike Global Offensive";
+	const char* steamPath = "D:\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive";
 
 	// Check if CS:GO executable exists
 	std::string csgoPath = std::string(steamPath) + "\\csgo.exe";
@@ -542,15 +543,21 @@ void gui::Render() noexcept
 
 				ImGui::Toggle("TriggerBot", &globals::TriggerBot);
 				if (ImGui::IsItemHovered())
-					ImGui::SetTooltip("Shoots players");
+					ImGui::SetTooltip("Shoots players | hold Left CTRL to use");
 
 				ImGui::Spacing();
 
 				ImGui::Toggle("aimbot", &globals::aimbot);
 				if (ImGui::IsItemHovered())
-					ImGui::SetTooltip("aimbot [BETA]");
+					ImGui::SetTooltip("aimbot [BETA] | hold Left CTRL to use");
 
-				ImGui::Text("Dont run both at once other wise it might not work");
+				ImGui::Spacing();
+
+				ImGui::Toggle("Recoil Control", &globals::RCS);
+				if (ImGui::IsItemHovered())
+					ImGui::SetTooltip("RCS [BETA]");
+
+				ImGui::Text("Dont run aimbot and triggerbot at the same time other wise it might not work");
 				break;
 
 			case 12:
@@ -558,7 +565,7 @@ void gui::Render() noexcept
 
 				ImGui::Toggle("Skin Changer", &globals::SkinChanger);
 				if (ImGui::IsItemHovered())
-					ImGui::SetTooltip("Changes skins on select few weapons [BETA] (doesn't work yet)");
+					ImGui::SetTooltip("Changes skins on select few weapons [BETA] (kinda works)");
 				break;
 
 			case 2:
@@ -660,8 +667,6 @@ void gui::Render() noexcept
 					globals::flashDur = true;
 
 					globals::FOV = true;
-
-					globals::TriggerBot = true;
 
 					globals::aimbot = true;
 				}

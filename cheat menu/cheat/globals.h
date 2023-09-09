@@ -37,6 +37,8 @@ namespace globals
 
 	inline bool SkinChanger = false; //beta
 
+	inline bool RCS = false; //del
+
 }
 
 namespace checkboxes

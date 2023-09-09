@@ -1,6 +1,13 @@
 C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\cheat\gui.cpp;C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\Release\gui.obj
 C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\cheat\hacks.cpp;C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\Release\hacks.obj
 C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\cheat\main.cpp;C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\Release\main.obj
+C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\DiscordRpc\Class\Discord.cpp;C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\Release\Discord.obj
+C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\DiscordRpc\SDK\connection_win.cpp;C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\Release\connection_win.obj
+C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\DiscordRpc\SDK\discord_register_win.cpp;C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\Release\discord_register_win.obj
+C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\DiscordRpc\SDK\discord_rpc.cpp;C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\Release\discord_rpc.obj
+C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\DiscordRpc\SDK\dllmain.cpp;C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\Release\dllmain.obj
+C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\DiscordRpc\SDK\rpc_connection.cpp;C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\Release\rpc_connection.obj
+C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\DiscordRpc\SDK\serialization.cpp;C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\Release\serialization.obj
 C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\imgui\imgui.cpp;C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\Release\imgui.obj
 C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\imgui\imgui_demo.cpp;C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\Release\imgui_demo.obj
 C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\imgui\imgui_draw.cpp;C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\Release\imgui_draw.obj

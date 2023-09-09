@@ -3,6 +3,9 @@
 #include "hacks.h"
 #include <thread>
 #include <iostream>
+#include "../DiscordRpc/Class/Discord.h"//del
+
+Discord* g_Discord;//del
 
 int __stdcall wWinMain(
 	HINSTANCE instance,
@@ -12,6 +15,11 @@ int __stdcall wWinMain(
 
 {
 	
+	//del
+	g_Discord->Initialize();
+	g_Discord->Update();
+	//here
+
 	Memory mem{ "csgo.exe" };
 
 	globals::clientAddress = mem.GetModuleAddress("client.dll");

@@ -137,6 +137,51 @@
     <ClInclude Include="cheat\imguidesign.h" />
     <ClInclude Include="cheat\memory.h" />
     <ClInclude Include="cheat\vectors.h" />
+    <ClInclude Include="DiscordRpc\Class\Discord.h" />
+    <ClInclude Include="DiscordRpc\SDK\backoff.h" />
+    <ClInclude Include="DiscordRpc\SDK\connection.h" />
+    <ClInclude Include="DiscordRpc\SDK\discord_register.h" />
+    <ClInclude Include="DiscordRpc\SDK\discord_rpc.h" />
+    <ClInclude Include="DiscordRpc\SDK\msg_queue.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\allocators.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\cursorstreamwrapper.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\document.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\encodedstream.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\encodings.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\error\en.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\error\error.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\filereadstream.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\filewritestream.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\fwd.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\internal\biginteger.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\internal\clzll.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\internal\diyfp.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\internal\dtoa.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\internal\ieee754.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\internal\itoa.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\internal\meta.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\internal\pow10.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\internal\regex.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\internal\stack.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\internal\strfunc.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\internal\strtod.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\internal\swap.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\istreamwrapper.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\memorybuffer.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\memorystream.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\msinttypes\inttypes.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\msinttypes\stdint.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\ostreamwrapper.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\pointer.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\prettywriter.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\rapidjson.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\reader.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\schema.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\stream.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\stringbuffer.h" />
+    <ClInclude Include="DiscordRpc\SDK\rapidjson\writer.h" />
+    <ClInclude Include="DiscordRpc\SDK\rpc_connection.h" />
+    <ClInclude Include="DiscordRpc\SDK\serialization.h" />
     <ClInclude Include="Icons\font\font.h" />
     <ClInclude Include="Icons\font\icons.h" />
     <ClInclude Include="Icons\images.h" />
@@ -154,11 +199,19 @@
     <ClInclude Include="imgui\imstb_rectpack.h" />
     <ClInclude Include="imgui\imstb_textedit.h" />
     <ClInclude Include="imgui\imstb_truetype.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cheat\gui.cpp" />
     <ClCompile Include="cheat\hacks.cpp" />
     <ClCompile Include="cheat\main.cpp" />
+    <ClCompile Include="DiscordRpc\Class\Discord.cpp" />
+    <ClCompile Include="DiscordRpc\SDK\connection_win.cpp" />
+    <ClCompile Include="DiscordRpc\SDK\discord_register_win.cpp" />
+    <ClCompile Include="DiscordRpc\SDK\discord_rpc.cpp" />
+    <ClCompile Include="DiscordRpc\SDK\dllmain.cpp" />
+    <ClCompile Include="DiscordRpc\SDK\rpc_connection.cpp" />
+    <ClCompile Include="DiscordRpc\SDK\serialization.cpp" />
     <ClCompile Include="imgui\imgui.cpp" />
     <ClCompile Include="imgui\imgui_demo.cpp" />
     <ClCompile Include="imgui\imgui_draw.cpp" />
@@ -173,6 +226,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="imgui.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Quantum CSGO Menu.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Pics\final.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

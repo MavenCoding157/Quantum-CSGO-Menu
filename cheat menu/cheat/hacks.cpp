@@ -278,6 +278,16 @@ void hacks::VisualsThread(const Memory& mem) noexcept
 
 				}
 			}
+
+			//(for RCS)
+			auto oldPunch = Vector2{ };
+
+			//del
+			if (globals::RCS)
+			{
+				//coming soon
+			}
+			//here
 		}	
 	}
 }
