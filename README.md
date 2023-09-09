@@ -22,6 +22,8 @@
 
 # **UPDATE LOG**
 
+09/09/2023: added Discord RPC onto the cheat 
+
 09/09/2023: added aimbot, other basic changes 
 
 08/09/2023: Uploaded to Gitub  
