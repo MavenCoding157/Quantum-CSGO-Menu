@@ -3,6 +3,7 @@
 #include "gui.h"
 #include "vectors.h"//del
 #include <thread>
+#include <array>
 
 //bool (or something)
 int flashDur = 0;
@@ -170,7 +171,6 @@ void hacks::VisualsThread(const Memory& mem) noexcept
 				
 			}
 
-			//del
 			if (globals::aimbot)
 			{
 				// aimbot key
@@ -242,7 +242,42 @@ void hacks::VisualsThread(const Memory& mem) noexcept
 					mem.Write<Vector3>(clientState + offsets::dwClientState_ViewAngles, viewAngles + bestAngle); // smoothing
 				}
 			}
-			//here
+
+
+			//beta (del)
+			if (globals::SkinChanger)
+			{
+				//skin changer below
+				const auto& localPlayer = mem.Read<std::uintptr_t>(globals::clientAddress + offsets::dwLocalPlayer);
+
+				const auto& weapons = mem.Read<std::array<unsigned long, 8>>(localPlayer + offsets::m_hMyWeapons);
+
+				for (const auto& handle : weapons)
+				{
+					const auto& weapon = mem.Read<std::uintptr_t>(globals::clientAddress + offsets::dwEntityList + (handle & 0xFFF) * 0x10);
+
+					//valid weapon
+					if (!weapon)
+						continue;
+
+					//if apply skin
+					if (const auto paint = GetWeaponPaint(mem.Read<short>(weapon + offsets::m_iItemDefinitionIndex)))
+					{
+						const bool shouldUpdate = mem.Read<std::int32_t>(weapon + offsets::m_nFallbackPaintKit) != paint;
+
+						//fallback values
+						mem.Write<std::int32_t>(weapon + offsets::m_iItemIDHigh, -1);
+
+						mem.Write<std::int32_t>(weapon + offsets::m_nFallbackPaintKit, paint);
+						mem.Write<float>(weapon + offsets::m_flFallbackWear, 0.1f);
+
+
+						if (shouldUpdate)
+							mem.Write<std::int32_t>(mem.Read<std::uintptr_t>(globals::engineAddress + offsets::dwClientState) + 0x174, -1);
+					}
+
+				}
+			}
 		}	
 	}
 }

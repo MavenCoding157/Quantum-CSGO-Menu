@@ -33,7 +33,9 @@ namespace globals
 
 	inline bool TriggerBot = false;
 
-	inline bool aimbot = false;//coming soon
+	inline bool aimbot = false;
+
+	inline bool SkinChanger = false; //beta
 
 }
 
@@ -42,6 +44,20 @@ namespace checkboxes
 	//checkboxes (todo)
 	inline bool Blockreports = false;
 	inline bool SafeLaunch = false;
+}
+
+//skins
+constexpr const int GetWeaponPaint(const short& itemDefinition)
+{
+	switch (itemDefinition)
+	{
+	case 1: return 711; //deagle
+	case 4: return 38; //glock
+	case 7: return 490; //ak
+	case 9: return 344; //awp
+	case 61: return 653; //usp
+	default: return 0;
+	}
 }
 
 namespace offsets 

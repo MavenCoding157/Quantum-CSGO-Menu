@@ -423,6 +423,9 @@ void gui::Render() noexcept
 			if (ImGui::Button("Aim", { ImGui::GetContentRegionAvail().x, button_height })) { current_tab = 10; }
 			ImGui::Spacing();
 
+			if (ImGui::Button("Skin Changer", { ImGui::GetContentRegionAvail().x, button_height })) { current_tab = 12; }
+			ImGui::Spacing();
+
 			if (ImGui::Button("Misc", { ImGui::GetContentRegionAvail().x, button_height })) { current_tab = 2; }
 			ImGui::Spacing();
 
@@ -536,6 +539,7 @@ void gui::Render() noexcept
 
 			case 10:
 				ImGuiPP::CenterText("Aim", 1, TRUE);
+
 				ImGui::Toggle("TriggerBot", &globals::TriggerBot);
 				if (ImGui::IsItemHovered())
 					ImGui::SetTooltip("Shoots players");
@@ -545,6 +549,16 @@ void gui::Render() noexcept
 				ImGui::Toggle("aimbot", &globals::aimbot);
 				if (ImGui::IsItemHovered())
 					ImGui::SetTooltip("aimbot [BETA]");
+
+				ImGui::Text("Dont run both at once other wise it might not work");
+				break;
+
+			case 12:
+				ImGuiPP::CenterText("Very, Very Basic Skin Changer", 1, TRUE);
+
+				ImGui::Toggle("Skin Changer", &globals::SkinChanger);
+				if (ImGui::IsItemHovered())
+					ImGui::SetTooltip("Changes skins on select few weapons [BETA] (doesn't work yet)");
 				break;
 
 			case 2:
