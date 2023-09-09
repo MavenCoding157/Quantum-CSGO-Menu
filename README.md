@@ -30,7 +30,9 @@ This is an external cheat, so no need to inject it.
 
 This is not the final build and is only a more updated version of the old menu.
 
-This is my first Cheat so it may have some bugs, but i will work to fix them. Also sorry if some features dont work but i will try to update regulary.
+This is my first/second Cheat so it may have some bugs, but i will work to fix them. Also sorry if some features dont work but i will try to update regulary.
+
+Also please note that I have assigned the launch csgo folder path to where I have csgo saved so you might need to re-assign the path your location if you wanna use that feature. 
 
 **TO RUN THE FILE**
 
