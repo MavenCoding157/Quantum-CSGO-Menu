@@ -22,6 +22,8 @@
 
 # **UPDATE LOG**
 
+10/09/2023: added more beta features and a windows popup telling you that the cheat is enabled
+
 09/09/2023: added Discord RPC onto the cheat 
 
 09/09/2023: added aimbot, other basic changes 
