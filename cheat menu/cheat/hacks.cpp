@@ -12,7 +12,6 @@ int FOV = 130;
 
 int norFOV = 90;
 
-int zoomFOV = 45;
 
 void hacks::VisualsThread(const Memory& mem) noexcept
 {
@@ -129,12 +128,6 @@ void hacks::VisualsThread(const Memory& mem) noexcept
 			{
 				mem.Write<std::uintptr_t>(globals::clientAddress + offsets::dwForceJump, 6);
 				mem.Write<std::uintptr_t>(globals::clientAddress + offsets::dwForceJump, 4);
-			}
-
-			if (globals::zoomFOV)
-			{
-				norFOV = mem.Read<int32_t>(localPlayer + offsets::m_iFOV);
-				mem.Write(localPlayer + offsets::m_iFOV, 45);
 			}
 
 			if (globals::TriggerBot)
@@ -288,6 +281,12 @@ void hacks::VisualsThread(const Memory& mem) noexcept
 				//coming soon
 			}
 			//here
+
+
+			if (globals::free_cam)
+			{
+				//VK_LMENU
+			}
 		}	
 	}
 }

@@ -10,6 +10,7 @@
 #include "../Icons/font/font.h"//del
 #include "../Icons/font/icons.h"//del
 #include "../Icons/images.h"//del
+#include "../DiscordRpc/Class/Discord.h"//del
 
 #include <windows.h>
 #include <shellapi.h>
@@ -321,7 +322,6 @@ void gui::EndRender() noexcept
 		ResetDevice();
 }
 //bools
-static bool fov = false;
 static bool showing = true;
 static float size = 450;
 static bool my_bool;
@@ -346,7 +346,7 @@ std::string password = "root";
 
 static bool circleshowing = true;//del
 static bool fovcircle = false;//del
-static float circlesize = 450;
+static float circlesize = 450;//del
 
 
 //game launch code
@@ -363,7 +363,6 @@ std::string FindCSGOPath() {
 	// If not found, return an empty string
 	return "";
 }
-
 
 void gui::Render() noexcept
 {
@@ -563,7 +562,7 @@ void gui::Render() noexcept
 			case 12:
 				ImGuiPP::CenterText("Very, Very Basic Skin Changer", 1, TRUE);
 
-				ImGui::Toggle("Skin Changer", &globals::SkinChanger);
+				ImGui::Checkbox("Skin Changer", &globals::SkinChanger);
 				if (ImGui::IsItemHovered())
 					ImGui::SetTooltip("Changes skins on select few weapons [BETA] (kinda works)");
 				break;
@@ -583,6 +582,10 @@ void gui::Render() noexcept
 					ImGui::Toggle("Anti-AFK", &globals::AntiAFK);
 					if (ImGui::IsItemHovered())
 						ImGui::SetTooltip("Makes it so you cant go idle");
+					ImGui::Spacing();
+					ImGui::Toggle("Free Cam", &globals::free_cam);
+					if (ImGui::IsItemHovered())
+						ImGui::SetTooltip("You are able to fly around the map in a different camera mode");
 					
 				}
 				ImGui::EndChild();
@@ -592,10 +595,6 @@ void gui::Render() noexcept
 					ImGui::Toggle("Normal FOV", &globals::norFOV);
 					if (ImGui::IsItemHovered())
 						ImGui::SetTooltip("Changes FOV back to normal");
-					ImGui::Spacing();
-					ImGui::Toggle("Zoomed FOV", &globals::zoomFOV);
-					if (ImGui::IsItemHovered())
-						ImGui::SetTooltip("Makes FOV zoomed");
 					ImGui::Spacing();
 					ImGui::Toggle("FOV Changer", &globals::FOV);
 					if (ImGui::IsItemHovered())

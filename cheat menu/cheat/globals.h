@@ -25,8 +25,6 @@ namespace globals
 
 	inline bool norFOV = false;
 
-	inline bool zoomFOV = false;
-
 	inline bool thirdperson = false;
 
 	inline bool AntiAFK = false;
@@ -39,13 +37,14 @@ namespace globals
 
 	inline bool RCS = false; //del
 
+	inline bool free_cam = false;//del
+
 }
 
 namespace checkboxes
 {
 	//checkboxes (todo)
 	inline bool Blockreports = false;
-	inline bool SafeLaunch = false;
 }
 
 //skins

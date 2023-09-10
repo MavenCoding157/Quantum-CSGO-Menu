@@ -5,7 +5,13 @@
 #include <iostream>
 #include "../DiscordRpc/Class/Discord.h"//del
 
-Discord* g_Discord;//del
+//discord thing idk
+Discord* g_Discord;
+
+//popup
+void ShowHelloWorldMessageBox() {
+	MessageBox(NULL, "Cheat Successfully Enabled!", "Quantum CSGO Menu", MB_ICONINFORMATION | MB_OK);
+}
 
 int __stdcall wWinMain(
 	HINSTANCE instance,
@@ -15,10 +21,11 @@ int __stdcall wWinMain(
 
 {
 	
-	//del
+	// Display the message box when the application is run
+	ShowHelloWorldMessageBox();
+
 	g_Discord->Initialize();
 	g_Discord->Update();
-	//here
 
 	Memory mem{ "csgo.exe" };
 

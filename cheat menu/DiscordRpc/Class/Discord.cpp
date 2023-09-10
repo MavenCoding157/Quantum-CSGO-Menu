@@ -9,14 +9,17 @@ void Discord::Initialize()
 
 void Discord::Update()
 {
-    DiscordRichPresence discordPresence;
-    memset(&discordPresence, 0, sizeof(discordPresence));
-    discordPresence.state = "Quantum CSGO Menu";
-    discordPresence.details = "Undetected CSGO External Cheat";
-    discordPresence.startTimestamp = 1507665886;
-    discordPresence.endTimestamp = 1507665886;
-    discordPresence.largeImageKey = "final";
-    discordPresence.largeImageText = "Quantum CSGO Menu";
-    discordPresence.smallImageKey = "final";
-    Discord_UpdatePresence(&discordPresence);
+
+        DiscordRichPresence discordPresence;
+        memset(&discordPresence, 0, sizeof(discordPresence));
+        discordPresence.state = "Quantum CSGO Menu";
+        discordPresence.details = "Undetected CSGO External Cheat";
+        discordPresence.startTimestamp = 1507665886;
+        discordPresence.endTimestamp = 1507665886;
+        discordPresence.largeImageKey = "final";
+        discordPresence.largeImageText = "Quantum CSGO Menu";
+        discordPresence.smallImageKey = "final";
+        Discord_UpdatePresence(&discordPresence);
+ 
 }
+
