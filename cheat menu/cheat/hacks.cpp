@@ -1,7 +1,8 @@
 #include "hacks.h"
 #include "globals.h"
 #include "gui.h"
-#include "vectors.h"//del
+#include "vectors.h"
+#include "skinchanger.h"
 #include <thread>
 #include <array>
 
@@ -12,6 +13,9 @@ int FOV = 130;
 
 int norFOV = 90;
 
+bool shouldSleep = true;
+time_t curtime = time(NULL);
+time_t updateTimer = 0;
 
 void hacks::VisualsThread(const Memory& mem) noexcept
 {
@@ -247,29 +251,26 @@ void hacks::VisualsThread(const Memory& mem) noexcept
 
 				for (const auto& handle : weapons)
 				{
-					const auto& weapon = mem.Read<std::uintptr_t>(globals::clientAddress + offsets::dwEntityList + (handle & 0xFFF) * 0x10);
+					const auto& weapon = mem.Read<std::uintptr_t>((globals::clientAddress + offsets::dwEntityList + (handle & 0xFFF) * 0x10) - 0x10);
 
-					//valid weapon
 					if (!weapon)
 						continue;
 
-					//if apply skin
-					if (const auto paint = GetWeaponPaint(mem.Read<short>(weapon + offsets::m_iItemDefinitionIndex)))
+					if (const auto& paint = GetWeaponPaint(mem.Read<short>(weapon + offsets::m_iItemDefinitionIndex)))
 					{
 						const bool shouldUpdate = mem.Read<std::int32_t>(weapon + offsets::m_nFallbackPaintKit) != paint;
 
-						//fallback values
 						mem.Write<std::int32_t>(weapon + offsets::m_iItemIDHigh, -1);
-
 						mem.Write<std::int32_t>(weapon + offsets::m_nFallbackPaintKit, paint);
-						mem.Write<float>(weapon + offsets::m_flFallbackWear, 0.1f);
-
+						mem.Write<float>(weapon + offsets::m_flFallbackWear, 0.f);
+						mem.Write<std::int32_t>(weapon + offsets::m_nFallbackStatTrak, 1337);
+						mem.Write<std::int32_t>(weapon + offsets::m_iAccountID, mem.Read<std::int32_t>(weapon + offsets::m_OriginalOwnerXuidLow));
 
 						if (shouldUpdate)
 							mem.Write<std::int32_t>(mem.Read<std::uintptr_t>(globals::engineAddress + offsets::dwClientState) + 0x174, -1);
 					}
-
 				}
+
 			}
 
 			//(for RCS)

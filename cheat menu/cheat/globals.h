@@ -41,25 +41,32 @@ namespace globals
 
 }
 
+//del
+class skinchanger
+{
+private:
+	
+	int i_ak_skin = 1;
+	int i_m4_skin = 1;
+	int i_awp_skin = 1;
+	int i_m4_silencer_skin = 1;
+public:
+
+	int* ak_skin = &i_ak_skin;
+	int* m4_skin = &i_m4_skin;
+	int* awp_skin = &i_awp_skin;
+	int* m4_silencer_skin = &i_m4_silencer_skin;
+};
+
+inline skinchanger g_Options;
+//here
+
 namespace checkboxes
 {
 	//checkboxes (todo)
 	inline bool Blockreports = false;
 }
 
-//skins
-constexpr const int GetWeaponPaint(const short& itemDefinition)
-{
-	switch (itemDefinition)
-	{
-	case 1: return 711; //deagle
-	case 4: return 38; //glock
-	case 7: return 490; //ak
-	case 9: return 344; //awp
-	case 61: return 653; //usp
-	default: return 0;
-	}
-}
 
 namespace offsets 
 {

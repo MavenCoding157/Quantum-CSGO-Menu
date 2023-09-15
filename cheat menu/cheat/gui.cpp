@@ -348,6 +348,14 @@ static bool circleshowing = true;//del
 static bool fovcircle = false;//del
 static float circlesize = 450;//del
 
+//del
+//skinchanger stuff
+const char* ak_skins[] = { "None", "Neon Rider", "Bloodsport", "Wasteland Rebel", "Fuel Injector", "Vulcan", "Frontside Misty", "Point Disarray", "Redline", "Uncharted", "Elite Build" };
+const char* m4_skins[] = { "None", "Howl", "The Emperor", "Neo-Noir", "Buzz Kill", "Cyber Security", "Desolate Space", "Dragon King", "In Living Color", "Asiimov", "Spider Lily" };
+const char* m4_silencer_skins[] = { "None", "Printsreen", "Player Two", "Chantico's Fire", "Golden Coil", "Hyber Beast", "Cyrex", "Nightmare", "Leaded Glass", "Decimator", "Icarus Fell" };
+const char* awp_skins[] = { "None", "Containment Breach", "Wild Fire", "Neo-Noir", "Hyper Beast", "Asiimov", "Lightning Strike", "Fade", "The Prince", "Gungnir", "Medusa", "Dragon Lore", "Fever Dream", "Elite Build", "Redline", "Electric Hive", "BOOM", "Atheris", "Wrom God", "Ping DDPAT", };
+//here
+
 
 //game launch code
 std::string FindCSGOPath() {
@@ -560,11 +568,36 @@ void gui::Render() noexcept
 				break;
 
 			case 12:
-				ImGuiPP::CenterText("Very, Very Basic Skin Changer", 1, TRUE);
+				ImGuiPP::CenterText("Skin Changer [BETA]", 1, TRUE);
 
-				ImGui::Checkbox("Skin Changer", &globals::SkinChanger);
+				ImGui::Toggle("Enable Skin Changer", &globals::SkinChanger);
 				if (ImGui::IsItemHovered())
-					ImGui::SetTooltip("Changes skins on select few weapons [BETA] (kinda works)");
+					ImGui::SetTooltip("Skin Changer");
+
+				ImGui::Spacing();
+				
+				ImGuiPP::CenterText("Skins Below", 1, TRUE);
+				ImGui::Spacing();
+				ImGui::Combo("AK47", g_Options.ak_skin, ak_skins, IM_ARRAYSIZE(ak_skins), 0);
+				if (ImGui::IsItemHovered())
+					ImGui::SetTooltip("Skin Changer");
+
+				
+				ImGui::Combo("M4A4", g_Options.m4_skin, m4_skins, IM_ARRAYSIZE(m4_skins), 0);
+				if (ImGui::IsItemHovered())
+					ImGui::SetTooltip("Skin Changer");
+
+				
+				ImGui::Combo("M4A1-S", g_Options.m4_silencer_skin, m4_silencer_skins, IM_ARRAYSIZE(m4_silencer_skins), 0);
+				if (ImGui::IsItemHovered())
+					ImGui::SetTooltip("Skin Changer");
+
+		
+				ImGui::Combo("AWP", g_Options.awp_skin, awp_skins, IM_ARRAYSIZE(awp_skins), 0);
+				if (ImGui::IsItemHovered())
+					ImGui::SetTooltip("Skin Changer");
+
+
 				break;
 
 			case 2:
@@ -668,8 +701,19 @@ void gui::Render() noexcept
 					globals::FOV = true;
 
 					globals::aimbot = true;
-				}
 
+				}
+				//del
+				ImGui::Spacing();
+				if (ImGui::Button("Save cfg", { ImGui::GetContentRegionAvail().x, butn_tall }))
+					if (ImGui::IsItemHovered())
+						ImGui::SetTooltip("Coming Soon...");
+				ImGui::Spacing();
+
+				if (ImGui::Button("Load cfg", { ImGui::GetContentRegionAvail().x, butn_tall }))
+					if (ImGui::IsItemHovered())
+						ImGui::SetTooltip("Coming Soon...");
+				//del
 				break;
 
 			case 5:
@@ -738,6 +782,5 @@ void gui::Render() noexcept
 		}
 
 		ImGui::End();
-	//}
 }
 

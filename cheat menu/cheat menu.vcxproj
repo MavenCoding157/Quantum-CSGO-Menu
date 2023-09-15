@@ -136,6 +136,7 @@
     <ClInclude Include="cheat\hacks.h" />
     <ClInclude Include="cheat\imguidesign.h" />
     <ClInclude Include="cheat\memory.h" />
+    <ClInclude Include="cheat\skinchanger.h" />
     <ClInclude Include="cheat\vectors.h" />
     <ClInclude Include="DiscordRpc\Class\Discord.h" />
     <ClInclude Include="DiscordRpc\SDK\backoff.h" />
@@ -188,6 +189,7 @@
     <ClInclude Include="imgui\imconfig.h" />
     <ClInclude Include="imgui\imgui.h" />
     <ClInclude Include="imgui\imgui_impl_dx9.h" />
+    <ClInclude Include="imgui\imgui_impl_glfw.h" />
     <ClInclude Include="imgui\imgui_impl_win32.h" />
     <ClInclude Include="imgui\imgui_internal.h" />
     <ClInclude Include="imgui\imgui_offset_rect.h" />
@@ -226,6 +228,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="imgui.ini" />
+    <None Include="Quantum CSGO Menu.aps" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Quantum CSGO Menu.rc" />
