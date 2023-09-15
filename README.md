@@ -22,6 +22,8 @@
 
 # **UPDATE LOG**
 
+16/09/2023: added a working skin changer with over 30+ different skins on loads od different guns
+
 10/09/2023: added more beta features and a windows popup telling you that the cheat is enabled
 
 09/09/2023: added Discord RPC onto the cheat 
