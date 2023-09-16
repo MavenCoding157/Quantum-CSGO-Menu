@@ -136,7 +136,7 @@ void hacks::VisualsThread(const Memory& mem) noexcept
 
 			if (globals::TriggerBot)
 			{
-				
+
 				std::this_thread::sleep_for(std::chrono::milliseconds(50));
 
 				if (!GetAsyncKeyState(VK_CONTROL))
@@ -165,7 +165,7 @@ void hacks::VisualsThread(const Memory& mem) noexcept
 				mem.Write<std::uintptr_t>(globals::clientAddress + offsets::dwForceAttack, 6);
 				std::this_thread::sleep_for(std::chrono::milliseconds(20));
 				mem.Write<std::uintptr_t>(globals::clientAddress + offsets::dwForceAttack, 4);
-				
+
 			}
 
 			if (globals::aimbot)
@@ -276,12 +276,42 @@ void hacks::VisualsThread(const Memory& mem) noexcept
 			//(for RCS)
 			auto oldPunch = Vector2{ };
 
-			//del
 			if (globals::RCS)
 			{
-				//coming soon
+				const auto& clientState = mem.Read<std::uintptr_t>(globals::engineAddress + offsets::dwClientState);
+				const auto& viewAngles = mem.Read<Vector2>(clientState + offsets::dwClientState_ViewAngles);
+
+				const auto& aimPunch = mem.Read<Vector2>(localPlayer + offsets::m_aimPunchAngle);
+				//2, 0 , 0.01
+				const float x = 0 - g_Options.recoil_smooth_x[0] * 0.00f;
+				const float y = 0 - g_Options.recoil_smooth_y[0] * 0.00f;
+
+				auto newAngles = Vector2{
+					viewAngles.x + oldPunch.x - aimPunch.x * x,
+					viewAngles.y + oldPunch.y - aimPunch.y * y,
+				};
+
+				if (newAngles.x > 89.f)
+					newAngles.x = 89.f;
+
+				if (newAngles.x < -89.f)
+					newAngles.x = -89.f;
+
+				while (newAngles.y > 180.f)
+					newAngles.y -= 360.f;
+
+				while (newAngles.y < -180.f)
+					newAngles.y += 360.f;
+
+				mem.Write<Vector2>(clientState + offsets::dwClientState_ViewAngles, newAngles);
+
+				oldPunch.x = aimPunch.x * x;
+				oldPunch.y = aimPunch.y * y;
 			}
-			//here
+			else 
+			{
+				oldPunch.x = oldPunch.y = 0.f;
+			}
 
 
 			if (globals::free_cam)

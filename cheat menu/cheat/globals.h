@@ -42,7 +42,7 @@ namespace globals
 }
 
 //del
-class skinchanger
+class skinchanger //and Some extra Stuff credit to whoever made CSGO Multihack on github
 {
 private:
 	
@@ -50,12 +50,22 @@ private:
 	int i_m4_skin = 1;
 	int i_awp_skin = 1;
 	int i_m4_silencer_skin = 1;
+	//stuff below is for extra stuff
+	int i_recoil_smooth_x = 1;
+	int i_recoil_smooth_y = 1;
+	bool b_trigger = false;//del
+	int i_trigger_delay = 0;//del
 public:
 
 	int* ak_skin = &i_ak_skin;
 	int* m4_skin = &i_m4_skin;
 	int* awp_skin = &i_awp_skin;
 	int* m4_silencer_skin = &i_m4_silencer_skin;
+	//stuff below is for extra stuff
+	int* recoil_smooth_x = &i_recoil_smooth_x;
+	int* recoil_smooth_y = &i_recoil_smooth_y;
+	bool* trigger = &b_trigger;//del
+	int* trigger_delay = &i_trigger_delay;//del
 };
 
 inline skinchanger g_Options;

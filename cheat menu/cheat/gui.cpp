@@ -22,7 +22,7 @@
 #include <Lmcons.h>
 #include <chrono>
 #include <cmath>
-//here
+
 
 extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(
 	HWND window,
@@ -551,6 +551,9 @@ void gui::Render() noexcept
 				ImGui::Toggle("TriggerBot", &globals::TriggerBot);
 				if (ImGui::IsItemHovered())
 					ImGui::SetTooltip("Shoots players | hold Left CTRL to use");
+				ImGui::SliderInt("Trigger delay", g_Options.trigger_delay, 1, 50);
+				if (ImGui::IsItemHovered())
+					ImGui::SetTooltip("Trigger Delay [In early BETA stages]");
 
 				ImGui::Spacing();
 
@@ -562,9 +565,9 @@ void gui::Render() noexcept
 
 				ImGui::Toggle("Recoil Control", &globals::RCS);
 				if (ImGui::IsItemHovered())
-					ImGui::SetTooltip("RCS [BETA]");
+					ImGui::SetTooltip("RCS [BETA] (Kinda works idk)");
 
-				ImGui::Text("Dont run aimbot and triggerbot at the same time other wise it might not work");
+				ImGui::Text("Dont run aimbot and triggerbot at the \nsame time other wise it might not work");
 				break;
 
 			case 12:
@@ -572,7 +575,7 @@ void gui::Render() noexcept
 
 				ImGui::Toggle("Enable Skin Changer", &globals::SkinChanger);
 				if (ImGui::IsItemHovered())
-					ImGui::SetTooltip("Skin Changer");
+					ImGui::SetTooltip("Skin Changer (may take sometime to kick in once toggled on)");
 
 				ImGui::Spacing();
 				
@@ -632,6 +635,7 @@ void gui::Render() noexcept
 					ImGui::Toggle("FOV Changer", &globals::FOV);
 					if (ImGui::IsItemHovered())
 						ImGui::SetTooltip("Changes FOV");
+
 					ImGui::Spacing();
 					ImGuiPP::CenterText("Thirdperson", 1, TRUE);
 					ImGui::Spacing();
