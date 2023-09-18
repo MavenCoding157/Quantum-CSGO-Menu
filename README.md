@@ -99,7 +99,7 @@ Link to original menu style: https://github.com/cazzwastaken/externalia
 
 • Aimbot ✔️
 
-• Very, Very basic skin changer (basically never works) ✔️
+• Basic skin changer (basically never works) ✔️
 
 • RCS (Recoil Control System) [coming soon] ❌
 
