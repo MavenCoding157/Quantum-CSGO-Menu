@@ -33,7 +33,7 @@ namespace globals
 
 	inline bool aimbot = false;
 
-	inline bool SkinChanger = false; //beta
+	inline bool SkinChanger = true; //auto turned on
 
 	inline bool RCS = false; //del
 
@@ -51,6 +51,7 @@ private:
 	int i_awp_skin = 1;
 	int i_m4_silencer_skin = 1;
 	//stuff below is for extra stuff
+	bool i_recoil = false;
 	int i_recoil_smooth_x = 1;
 	int i_recoil_smooth_y = 1;
 	bool b_trigger = false;//del
@@ -62,6 +63,7 @@ public:
 	int* awp_skin = &i_awp_skin;
 	int* m4_silencer_skin = &i_m4_silencer_skin;
 	//stuff below is for extra stuff
+	bool* recoil = &i_recoil;
 	int* recoil_smooth_x = &i_recoil_smooth_x;
 	int* recoil_smooth_y = &i_recoil_smooth_y;
 	bool* trigger = &b_trigger;//del

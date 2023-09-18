@@ -241,7 +241,7 @@ void hacks::VisualsThread(const Memory& mem) noexcept
 			}
 
 
-			//beta (del)
+			//beta
 			if (globals::SkinChanger)
 			{
 				//skin changer below
@@ -283,8 +283,8 @@ void hacks::VisualsThread(const Memory& mem) noexcept
 
 				const auto& aimPunch = mem.Read<Vector2>(localPlayer + offsets::m_aimPunchAngle);
 				//2, 0 , 0.01
-				const float x = 0 - g_Options.recoil_smooth_x[0] * 0.00f;
-				const float y = 0 - g_Options.recoil_smooth_y[0] * 0.00f;
+				const float x = 2 - g_Options.recoil_smooth_x[0] * 0.01f;
+				const float y = 2 - g_Options.recoil_smooth_y[0] * 0.01f;
 
 				auto newAngles = Vector2{
 					viewAngles.x + oldPunch.x - aimPunch.x * x,
@@ -308,16 +308,15 @@ void hacks::VisualsThread(const Memory& mem) noexcept
 				oldPunch.x = aimPunch.x * x;
 				oldPunch.y = aimPunch.y * y;
 			}
-			else 
+			else
 			{
 				oldPunch.x = oldPunch.y = 0.f;
 			}
-
 
 			if (globals::free_cam)
 			{
 				//VK_LMENU
 			}
-		}	
+		}
 	}
 }

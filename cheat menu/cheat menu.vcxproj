@@ -183,6 +183,8 @@
     <ClInclude Include="DiscordRpc\SDK\rapidjson\writer.h" />
     <ClInclude Include="DiscordRpc\SDK\rpc_connection.h" />
     <ClInclude Include="DiscordRpc\SDK\serialization.h" />
+    <ClInclude Include="font\font.h" />
+    <ClInclude Include="font\icons.h" />
     <ClInclude Include="Icons\font\font.h" />
     <ClInclude Include="Icons\font\icons.h" />
     <ClInclude Include="Icons\images.h" />

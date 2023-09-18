@@ -7,9 +7,8 @@
 
 #include "globals.h"
 #include <corecrt_math.h>
-#include "../Icons/font/font.h"//del
-#include "../Icons/font/icons.h"//del
-#include "../Icons/images.h"//del
+#include "../font/icons.h"
+#include "../font/font.h"
 #include "../DiscordRpc/Class/Discord.h"//del
 
 #include <windows.h>
@@ -264,7 +263,21 @@ void gui::CreateImGui() noexcept
 	colors[ImGuiCol_NavWindowingDimBg] = ImVec4(0.80f, 0.80f, 0.80f, 0.20f);
 	colors[ImGuiCol_ModalWindowDimBg] = ImVec4(0.80f, 0.80f, 0.80f, 0.35f);
 
-	io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\tahoma.ttf", 20.f);
+	static const ImWchar icons_ranges[] = { 0xf000, 0xf3ff, 0 };
+	ImFontConfig icons_config;
+
+	ImFontConfig CustomFont;
+	CustomFont.FontDataOwnedByAtlas = false;
+
+	icons_config.MergeMode = true;
+	icons_config.PixelSnapH = true;
+	icons_config.OversampleH = 3;
+	icons_config.OversampleV = 3;
+
+	io.Fonts->AddFontFromMemoryTTF(const_cast<std::uint8_t*>(Custom), sizeof(Custom), 20, &CustomFont);
+	io.Fonts->AddFontFromMemoryCompressedTTF(font_awesome_data, font_awesome_size, 32.5f, &icons_config, icons_ranges);
+
+	io.Fonts->AddFontDefault();
 
 	ImGui_ImplWin32_Init(window);
 	ImGui_ImplDX9_Init(device);
@@ -371,6 +384,40 @@ std::string FindCSGOPath() {
 	// If not found, return an empty string
 	return "";
 }
+
+//rgb stuff (idk i might delete)
+float hue = 0.0f;
+float colorSpeed = 0.05f; // You can adjust the speed of the color change here
+
+void RenderFlashingRGBText() {
+	// Calculate the RGB color based on the current hue
+	ImVec4 textColor;
+	textColor.x = sinf(hue) * 0.5f + 0.5f;
+	textColor.y = sinf(hue + 2.0f * 3.14159265359f / 3.0f) * 0.5f + 0.5f;
+	textColor.z = sinf(hue + 4.0f * 3.14159265359f / 3.0f) * 0.5f + 0.5f;
+	textColor.w = 1.0f; // Alpha
+
+	// Set the text color
+	ImGui::TextColored(textColor, "Status: Undetected");
+
+	// Increase the hue value for the next frame
+	hue += colorSpeed;
+	if (hue > 1.0f) {
+		hue -= 1.0f;
+	}
+}
+
+void RGBText() {
+	// Call the function to render flashing RGB text
+	RenderFlashingRGBText();
+	// You can call RenderFlashingRGBText() here or in any other function
+}
+
+//cheat status message
+void CheatStatusMessageBox() {
+	MessageBox(NULL, "Cheat Online!", "Quantum CSGO Menu", MB_ICONINFORMATION | MB_OK);
+}
+
 
 void gui::Render() noexcept
 {
@@ -501,14 +548,21 @@ void gui::Render() noexcept
 				ImGui::BeginChild("Home", ImVec2(465, 0), true);
 				{
 					ImGuiPP::CenterText("Quantum Menu", 1, TRUE);
-					
-					//char username[UNLEN + 1];
-					//DWORD username_len = UNLEN + 1;
-					//GetUserName(username, &username_len);
 
-					ImGui::TextColored(ImColor(220, 190, 0, 255), "Version: 2.5.0");
-					ImGui::Text("Status: Undetected");
-				
+					ImGui::TextColored(ImColor(220, 190, 0, 255), "Version: 2.0");
+					//(for rgb text)
+					RenderFlashingRGBText();
+					ImGui::Spacing();
+					ImGui::Spacing();
+					ImGuiPP::CenterText("Cheat Status", 1, TRUE);
+					//(The only reason I added this is cause it looks coll btw)
+					if (ImGui::Button("Check Cheat Status", { ImGui::GetContentRegionAvail().x, butn_tall })) 
+					{
+						CheatStatusMessageBox();
+					}
+					if (ImGui::IsItemHovered())
+						ImGui::SetTooltip("Checks Cheat Status.");
+
 
 					//static char text[256] = "https://github.com/MavenCoding157/ShooterZ-menu";
 					//ImGui::Text("	  API Key [BETA]");
@@ -566,18 +620,13 @@ void gui::Render() noexcept
 				ImGui::Toggle("Recoil Control", &globals::RCS);
 				if (ImGui::IsItemHovered())
 					ImGui::SetTooltip("RCS [BETA] (Kinda works idk)");
+				ImGui::Spacing();
 
-				ImGui::Text("Dont run aimbot and triggerbot at the \nsame time other wise it might not work");
+				ImGui::Text("Dont run aimbot and triggerbot at the \nsame time other wise it might not work.");
 				break;
 
 			case 12:
 				ImGuiPP::CenterText("Skin Changer [BETA]", 1, TRUE);
-
-				ImGui::Toggle("Enable Skin Changer", &globals::SkinChanger);
-				if (ImGui::IsItemHovered())
-					ImGui::SetTooltip("Skin Changer (may take sometime to kick in once toggled on)");
-
-				ImGui::Spacing();
 				
 				ImGuiPP::CenterText("Skins Below", 1, TRUE);
 				ImGui::Spacing();
@@ -599,7 +648,6 @@ void gui::Render() noexcept
 				ImGui::Combo("AWP", g_Options.awp_skin, awp_skins, IM_ARRAYSIZE(awp_skins), 0);
 				if (ImGui::IsItemHovered())
 					ImGui::SetTooltip("Skin Changer");
-
 
 				break;
 

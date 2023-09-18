@@ -9,7 +9,7 @@
 Discord* g_Discord;
 
 //popup
-void ShowHelloWorldMessageBox() {
+void StartMessageBox() {
 	MessageBox(NULL, "Cheat Successfully Enabled!", "Quantum CSGO Menu", MB_ICONINFORMATION | MB_OK);
 }
 
@@ -22,7 +22,7 @@ int __stdcall wWinMain(
 {
 	
 	// Display the message box when the application is run
-	ShowHelloWorldMessageBox();
+	StartMessageBox();
 
 	g_Discord->Initialize();
 	g_Discord->Update();
