@@ -4,6 +4,7 @@
 #include <thread>
 #include <iostream>
 #include "../DiscordRpc/Class/Discord.h"//del
+#include "antiAC.h"
 
 //discord thing idk
 Discord* g_Discord;
@@ -34,7 +35,8 @@ int __stdcall wWinMain(
 	
 	
 	std::thread(hacks::VisualsThread, mem).detach();
-	
+	AntiAC ac;//basic bypass
+
 	// create gui
 	gui::CreateHWindow("Quantum Menu");
 	gui::CreateDevice();

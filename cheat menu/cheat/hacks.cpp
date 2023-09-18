@@ -317,6 +317,11 @@ void hacks::VisualsThread(const Memory& mem) noexcept
 			{
 				//VK_LMENU
 			}
+
+			if (globals::Spectators)
+			{
+				
+			}
 		}
 	}
 }

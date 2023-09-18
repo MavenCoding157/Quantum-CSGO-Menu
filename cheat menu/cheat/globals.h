@@ -39,6 +39,8 @@ namespace globals
 
 	inline bool free_cam = false;//del
 
+	inline bool Spectators = false;
+
 }
 
 //del

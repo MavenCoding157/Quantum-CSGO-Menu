@@ -131,6 +131,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="cheat\antiAC.h" />
     <ClInclude Include="cheat\globals.h" />
     <ClInclude Include="cheat\gui.h" />
     <ClInclude Include="cheat\hacks.h" />

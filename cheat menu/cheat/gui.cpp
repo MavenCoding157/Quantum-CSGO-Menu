@@ -360,6 +360,7 @@ std::string password = "root";
 static bool circleshowing = true;//del
 static bool fovcircle = false;//del
 static float circlesize = 450;//del
+bool openNewWindow = false;
 
 //del
 //skinchanger stuff
@@ -623,6 +624,8 @@ void gui::Render() noexcept
 				ImGui::Spacing();
 
 				ImGui::Text("Dont run aimbot and triggerbot at the \nsame time other wise it might not work.");
+				ImGui::Spacing();
+				ImGui::Text("Also don't run the skin changer at the same \ntime as any aim hack as it bugs the game out.");
 				break;
 
 			case 12:
@@ -649,6 +652,8 @@ void gui::Render() noexcept
 				if (ImGui::IsItemHovered())
 					ImGui::SetTooltip("Skin Changer");
 
+				ImGui::Spacing();
+				ImGui::Text("Also don't run any aim hacks at the same \ntime as the skin changer as it bugs the game out.");
 				break;
 
 			case 2:
@@ -670,6 +675,24 @@ void gui::Render() noexcept
 					ImGui::Toggle("Free Cam", &globals::free_cam);
 					if (ImGui::IsItemHovered())
 						ImGui::SetTooltip("You are able to fly around the map in a different camera mode");
+					ImGui::Spacing();
+					if (ImGui::Button("Spectators List [BETA")) {
+						openNewWindow = true; // Set the flag to true when the button is pressed
+					}
+					if (ImGui::IsItemHovered())
+						ImGui::SetTooltip("Shows People Spectating You [BETA]");
+
+					//new window
+					if (openNewWindow) {
+						// Use SetNextWindowPos to specify the window position
+						ImGui::SetNextWindowPos(ImVec2(100, 100), ImGuiCond_FirstUseEver);
+
+						ImGui::Begin("Spectator List", &openNewWindow, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoResize);
+
+						ImGui::Text("Comign Soon...");
+						// Add content to your new window here
+						ImGui::End();
+					}
 					
 				}
 				ImGui::EndChild();
