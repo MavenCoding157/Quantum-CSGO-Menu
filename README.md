@@ -7,7 +7,7 @@
 **I AM NOT RESPONSIBLE IF YOU GET BANNED USING THIS CHEAT**
 
 
-**PHOTOS OF THE CHEAT MENU**
+# **PHOTOS OF THE CHEAT MENU**
 
 ![Screenshot 2023-09-09 024124](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/cfdc22e0-67bd-4527-a792-c047ae184132)
 ![Screenshot 2023-09-09 024036](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/9cd0567b-62b9-4bd6-9ede-14187c66e2eb)
