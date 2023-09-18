@@ -4,6 +4,8 @@
 
 **THIS FILE IS ONLY INTENDED FOR WINDOWS**
 
+**I AM NOT RESPONSIBLE IF YOU GET BANNED USING THIS CHEAT**
+
 
 **PHOTOS OF THE CHEAT MENU**
 
@@ -47,6 +49,8 @@ This is not the final build and is only a more updated version of the old menu.
 This is my first/second Cheat so it may have some bugs, but i will work to fix them. Also sorry if some features dont work but i will try to update regulary.
 
 Also please note that I have assigned the launch csgo folder path to where I have csgo saved so you might need to re-assign the path your location if you wanna use that feature. 
+
+Be warned the skin changer does work but it is extremly buggy.
 
 
 # **TO RUN THE FILE**
