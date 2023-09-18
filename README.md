@@ -25,6 +25,8 @@
 
 # **UPDATE LOG**
 
+18/09/2023: Added basic bypass feature (erase PE Headers, etc)
+
 18/09/2023: added UI stuff e.g. flashing text etc
 
 16/09/2023: added a working skin changer with over 30+ different skins on loads od different guns
