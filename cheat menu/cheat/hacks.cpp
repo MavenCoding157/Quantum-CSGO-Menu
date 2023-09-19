@@ -315,12 +315,22 @@ void hacks::VisualsThread(const Memory& mem) noexcept
 
 			if (globals::free_cam)
 			{
-				//VK_LMENU
+				//coming soon
 			}
 
 			if (globals::Spectators)
 			{
-				
+				//coming soon
+			}
+
+			if (globals::Fakelag)
+			{
+				//coming soon
+			}
+
+			if (globals::WalkBot)
+			{
+				//coming soon
 			}
 		}
 	}

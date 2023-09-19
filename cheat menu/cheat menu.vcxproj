@@ -186,6 +186,7 @@
     <ClInclude Include="DiscordRpc\SDK\serialization.h" />
     <ClInclude Include="font\font.h" />
     <ClInclude Include="font\icons.h" />
+    <ClInclude Include="font\Image.h" />
     <ClInclude Include="Icons\font\font.h" />
     <ClInclude Include="Icons\font\icons.h" />
     <ClInclude Include="Icons\images.h" />

@@ -546,7 +546,7 @@ void gui::Render() noexcept
 
 			switch (current_tab) {
 			case 9:
-				ImGui::BeginChild("Home", ImVec2(465, 0), true);
+				ImGui::BeginChild("Home", ImVec2(535, 0), true);
 				{
 					ImGuiPP::CenterText("Quantum Menu", 1, TRUE);
 
@@ -630,7 +630,13 @@ void gui::Render() noexcept
 
 			case 12:
 				ImGuiPP::CenterText("Skin Changer [BETA]", 1, TRUE);
-				
+				ImGui::Spacing();
+				ImGui::Toggle("Update Skins", &globals::SkinChanger);
+				if (ImGui::IsItemHovered())
+					ImGui::SetTooltip("Turns on skin changer");
+
+				ImGui::Spacing();
+				ImGui::Spacing();
 				ImGuiPP::CenterText("Skins Below", 1, TRUE);
 				ImGui::Spacing();
 				ImGui::Combo("AK47", g_Options.ak_skin, ak_skins, IM_ARRAYSIZE(ak_skins), 0);
@@ -693,6 +699,11 @@ void gui::Render() noexcept
 						// Add content to your new window here
 						ImGui::End();
 					}
+
+					ImGui::Spacing();
+					ImGui::Toggle("Walk Bot", &globals::WalkBot);
+					if (ImGui::IsItemHovered())
+						ImGui::SetTooltip("Coming Soon...");
 					
 				}
 				ImGui::EndChild();
@@ -717,6 +728,17 @@ void gui::Render() noexcept
 					ImGui::Toggle("Normal thirdperson FOV", &globals::norFOV);
 					if (ImGui::IsItemHovered())
 						ImGui::SetTooltip("Changes FOV back to normal");
+
+					ImGui::Spacing();
+					ImGuiPP::CenterText("Extra Features", 1, TRUE);
+					ImGui::Spacing();
+					ImGui::Toggle("Fake-Lag [BETA]", &globals::AntiAFK);
+					if (ImGui::IsItemHovered())
+						ImGui::SetTooltip("Coming Soon...");
+					ImGui::Spacing();
+					ImGui::Toggle("Coming Soon...", &globals::AntiAFK);
+					if (ImGui::IsItemHovered())
+						ImGui::SetTooltip("Coming Soon...");
 
 				}
 				ImGui::EndChild();

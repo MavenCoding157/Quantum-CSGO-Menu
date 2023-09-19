@@ -33,7 +33,7 @@ namespace globals
 
 	inline bool aimbot = false;
 
-	inline bool SkinChanger = true; //auto turned on
+	inline bool SkinChanger = false; //beta
 
 	inline bool RCS = false; //del
 
@@ -41,6 +41,9 @@ namespace globals
 
 	inline bool Spectators = false;
 
+	inline bool Fakelag = false;//del
+
+	inline bool WalkBot = false;//del
 }
 
 //del
