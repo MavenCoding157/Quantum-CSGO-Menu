@@ -7,7 +7,7 @@
 **I AM NOT RESPONSIBLE IF YOU GET BANNED USING THIS CHEAT**
 
 
-**PHOTOS OF THE CHEAT MENU**
+# **PHOTOS OF THE CHEAT MENU**
 
 ![Screenshot 2023-09-09 024124](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/cfdc22e0-67bd-4527-a792-c047ae184132)
 ![Screenshot 2023-09-09 024036](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/9cd0567b-62b9-4bd6-9ede-14187c66e2eb)
@@ -24,6 +24,8 @@
 
 
 # **UPDATE LOG**
+
+18/09/2023: Added basic bypass feature (erase PE Headers, etc)
 
 18/09/2023: added UI stuff e.g. flashing text etc
 
@@ -97,7 +99,7 @@ Link to original menu style: https://github.com/cazzwastaken/externalia
 
 • Aimbot ✔️
 
-• Very, Very basic skin changer (basically never works) ✔️
+• Basic skin changer (basically never works) ✔️
 
 • RCS (Recoil Control System) [coming soon] ❌
 
