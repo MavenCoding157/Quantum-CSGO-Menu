@@ -700,12 +700,6 @@ void gui::Render() noexcept
 					ImGui::Toggle("Walk Bot", &globals::WalkBot);
 					if (ImGui::IsItemHovered())
 						ImGui::SetTooltip("Coming Soon...");
-					ImGui::Spacing();
-					//del
-					ImGui::Toggle("Anti-Smoke", &globals::flashDur);
-					if (ImGui::IsItemHovered())
-						ImGui::SetTooltip("Cant be flashed");
-					//here
 					
 				}
 				ImGui::EndChild();
@@ -780,13 +774,13 @@ void gui::Render() noexcept
 			case 4:
 				ImGuiPP::CenterText("Bugs and Future Features", 1, TRUE);
 				ImGui::Spacing();
-				ImGui::Text("[+] Configs tab will be coming soon (you will also be able to make and \n    save configs)");
+				ImGui::Text("[+] Configs tab will be coming soon (you will also be able to make and \n     save configs)");
 				ImGui::Spacing();
 				ImGui::Text("[+] We will improve the UI");
 				ImGui::Spacing();
 				ImGui::Text("[+] Fix RCS and add a aimbot fov slider and etc");
 				ImGui::Spacing();
-				ImGui::Text("[+] We will fix issues with the skin changer lagging the game as it is \n    permenantly on atm");
+				ImGui::Text("[+] We will fix issues with the skin changer lagging the game as it is \n     permenantly on atm");
 				//del
 				break;
 

@@ -1,7 +1,14 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (Release\) contains files shared from another project (cheat menu.vcxproj, ShooterZ Menu.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  gui.cpp
+C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\cheat\imguidesign.h(94,58): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\cheat\imguidesign.h(94,45): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\cheat\imguidesign.h(94,32): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\cheat\imguidesign.h(94,19): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\PC\Desktop\Quantum CSGO Menu\cheat menu\cheat\gui.cpp(824,70): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  hacks.cpp
   Generating code
-  1 of 2438 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+  2 of 2438 functions (<0.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    28 functions had inline decision re-evaluated but remain unchanged
+    27 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   cheat menu.vcxproj -> C:\Users\PC\Desktop\Quantum CSGO Menu\Release\Quantum CSGO Menu.exe
