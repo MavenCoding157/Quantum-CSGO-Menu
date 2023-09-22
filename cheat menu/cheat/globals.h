@@ -33,7 +33,7 @@ namespace globals
 
 	inline bool aimbot = false;
 
-	inline bool SkinChanger = false; //beta
+	inline bool SkinChanger = true; //beta
 
 	inline bool RCS = false; //del
 
@@ -46,7 +46,6 @@ namespace globals
 	inline bool WalkBot = false;//del
 }
 
-//del
 class skinchanger //and Some extra Stuff credit to whoever made CSGO Multihack on github
 {
 private:

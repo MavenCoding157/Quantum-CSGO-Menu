@@ -191,7 +191,7 @@ void hacks::VisualsThread(const Memory& mem) noexcept
 				const auto aimPunch = mem.Read<Vector3>(localPlayer + offsets::m_aimPunchAngle) * 2;
 
 				// aimbot fov
-				auto bestFov = 50.f;
+				auto bestFov = 5.f; //50.f (original)
 				auto bestAngle = Vector3{ };
 
 				for (auto i = 1; i <= 32; ++i)
@@ -239,7 +239,6 @@ void hacks::VisualsThread(const Memory& mem) noexcept
 					mem.Write<Vector3>(clientState + offsets::dwClientState_ViewAngles, viewAngles + bestAngle); // smoothing
 				}
 			}
-
 
 			//beta
 			if (globals::SkinChanger)

@@ -469,7 +469,7 @@ void gui::Render() noexcept
 			1,
 			{ ImGui::GetContentRegionAvail().x * 0.25f, ImGui::GetContentRegionAvail().y },
 			true)) {
-			constexpr auto button_height = 50;
+			constexpr auto button_height = 60;
 			if (ImGui::Button("Home", { ImGui::GetContentRegionAvail().x, button_height })) { current_tab = 9; }
 			ImGui::Spacing();
 
@@ -492,7 +492,7 @@ void gui::Render() noexcept
 			ImGui::Spacing();
 
 
-			if (ImGui::Button("Configs", { ImGui::GetContentRegionAvail().x, button_height })) { current_tab = 4; }
+			if (ImGui::Button("Future Features", { ImGui::GetContentRegionAvail().x, button_height })) { current_tab = 4; }
 			ImGui::Spacing();
 
 
@@ -504,7 +504,7 @@ void gui::Render() noexcept
 			ImGui::Spacing();
 
 
-			if (ImGui::Button("csgo Status", { ImGui::GetContentRegionAvail().x, button_height })) { current_tab = 8; }
+			if (ImGui::Button("CSGO Status", { ImGui::GetContentRegionAvail().x, button_height })) { current_tab = 8; }
 			if (ImGui::IsItemHovered())
 				ImGui::SetTooltip("Only works is application started before hand");
 			ImGui::Spacing();
@@ -532,7 +532,7 @@ void gui::Render() noexcept
 					Tick ^= 1;
 			}
 
-			if (ImGui::Button("    Creator:\nMavenCoding157", { ImGui::GetContentRegionAvail().x, button_height })) { current_tab = 7; }
+			if (ImGui::Button("      Creator:\nMavenCoding157", { ImGui::GetContentRegionAvail().x, button_height })) { current_tab = 7; }
 
 			ImGui::EndChild();
 		}
@@ -612,9 +612,9 @@ void gui::Render() noexcept
 
 				ImGui::Spacing();
 
-				ImGui::Toggle("aimbot", &globals::aimbot);
+				ImGui::Toggle("Legit aimbot", &globals::aimbot);
 				if (ImGui::IsItemHovered())
-					ImGui::SetTooltip("aimbot [BETA] | hold Left CTRL to use");
+					ImGui::SetTooltip("Legit aimbot [BETA] | hold Left CTRL to use");
 
 				ImGui::Spacing();
 
@@ -630,10 +630,6 @@ void gui::Render() noexcept
 
 			case 12:
 				ImGuiPP::CenterText("Skin Changer [BETA]", 1, TRUE);
-				ImGui::Spacing();
-				ImGui::Toggle("Update Skins", &globals::SkinChanger);
-				if (ImGui::IsItemHovered())
-					ImGui::SetTooltip("Turns on skin changer");
 
 				ImGui::Spacing();
 				ImGui::Spacing();
@@ -695,7 +691,7 @@ void gui::Render() noexcept
 
 						ImGui::Begin("Spectator List", &openNewWindow, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoResize);
 
-						ImGui::Text("Comign Soon...");
+						ImGui::Text("Coming Soon...");
 						// Add content to your new window here
 						ImGui::End();
 					}
@@ -704,6 +700,12 @@ void gui::Render() noexcept
 					ImGui::Toggle("Walk Bot", &globals::WalkBot);
 					if (ImGui::IsItemHovered())
 						ImGui::SetTooltip("Coming Soon...");
+					ImGui::Spacing();
+					//del
+					ImGui::Toggle("Anti-Smoke", &globals::flashDur);
+					if (ImGui::IsItemHovered())
+						ImGui::SetTooltip("Cant be flashed");
+					//here
 					
 				}
 				ImGui::EndChild();
@@ -732,11 +734,11 @@ void gui::Render() noexcept
 					ImGui::Spacing();
 					ImGuiPP::CenterText("Extra Features", 1, TRUE);
 					ImGui::Spacing();
-					ImGui::Toggle("Fake-Lag [BETA]", &globals::AntiAFK);
+					ImGui::Button("Fake-Lag [BETA]");
 					if (ImGui::IsItemHovered())
 						ImGui::SetTooltip("Coming Soon...");
 					ImGui::Spacing();
-					ImGui::Toggle("Coming Soon...", &globals::AntiAFK);
+					ImGui::Button("Coming Soon...");
 					if (ImGui::IsItemHovered())
 						ImGui::SetTooltip("Coming Soon...");
 
@@ -776,40 +778,15 @@ void gui::Render() noexcept
 				break;
 
 			case 4:
-				ImGuiPP::CenterText("Configs", 1, TRUE);
-				if (ImGui::Button("Legit config", { ImGui::GetContentRegionAvail().x, butn_tall })) {
-					globals::glow = true;
-
-					globals::radar = true;
-
-				}
+				ImGuiPP::CenterText("Bugs and Future Features", 1, TRUE);
 				ImGui::Spacing();
-				if (ImGui::Button("Crazy config", { ImGui::GetContentRegionAvail().x, butn_tall })) {
-					globals::glow = true;
-
-					globals::radar = true;
-
-					globals::chams = true;
-
-					globals::bhop = true;
-
-					globals::flashDur = true;
-
-					globals::FOV = true;
-
-					globals::aimbot = true;
-
-				}
-				//del
+				ImGui::Text("[+] Configs tab will be coming soon (you will also be able to make and \n    save configs)");
 				ImGui::Spacing();
-				if (ImGui::Button("Save cfg", { ImGui::GetContentRegionAvail().x, butn_tall }))
-					if (ImGui::IsItemHovered())
-						ImGui::SetTooltip("Coming Soon...");
+				ImGui::Text("[+] We will improve the UI");
 				ImGui::Spacing();
-
-				if (ImGui::Button("Load cfg", { ImGui::GetContentRegionAvail().x, butn_tall }))
-					if (ImGui::IsItemHovered())
-						ImGui::SetTooltip("Coming Soon...");
+				ImGui::Text("[+] Fix RCS and add a aimbot fov slider and etc");
+				ImGui::Spacing();
+				ImGui::Text("[+] We will fix issues with the skin changer lagging the game as it is \n    permenantly on atm");
 				//del
 				break;
 
