@@ -25,7 +25,9 @@
 
 # **UPDATE LOG**
 
-18/09/2023: Added basic bypass feature (erase PE Headers, etc)
+22/09/2023: added UI stuff e.g. future features list and etc
+
+18/09/2023: added basic bypass feature (erase PE Headers, etc)
 
 18/09/2023: added UI stuff e.g. flashing text etc
 
