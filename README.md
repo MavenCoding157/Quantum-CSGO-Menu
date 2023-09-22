@@ -9,23 +9,25 @@
 
 # **PHOTOS OF THE CHEAT MENU**
 
-![Screenshot 2023-09-09 024124](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/cfdc22e0-67bd-4527-a792-c047ae184132)
-![Screenshot 2023-09-09 024036](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/9cd0567b-62b9-4bd6-9ede-14187c66e2eb)
-![Screenshot 2023-09-09 024028](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/c11cb157-811b-4c43-8278-ec657d4557bb)
-![Screenshot 2023-09-09 024232](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/071d97fc-bc54-4e3a-8acf-28ae70ea26bd)
-![Screenshot 2023-09-09 024224](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/382a8e45-e481-4e54-98ec-54d53def8ac5)
-![Screenshot 2023-09-16 004743](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/94c7e966-3599-4a35-a669-ee878d9c671f)
-![Screenshot 2023-09-09 024216](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/c0857b17-9da8-41a5-b828-fee71ef574e8)
-![Screenshot 2023-09-09 024208](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/ea246f13-6cd9-42bf-802d-8453f9969c70)
-![Screenshot 2023-09-09 024159](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/f008a720-4fcb-417e-ac0b-a068e8a46d48)
-![Screenshot 2023-09-09 024149](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/7767e3b0-c6a1-40f8-939a-3ec3edc47589)
-![Screenshot 2023-09-09 024140](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/adc2cc64-f556-41de-9357-76d70a5c4871)
-![Screenshot 2023-09-09 024131](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/edaac35b-4cc6-4cec-b2f5-fc78b3b79844)
+![Screenshot 2023-09-22 165744](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/c6b3377d-190a-48f4-9131-611f884c0bef)
+![Screenshot 2023-09-22 165734](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/d71622fb-50fc-4137-8b38-1a24dcd00d93)
+![Screenshot 2023-09-22 165724](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/3251afc1-c790-4434-a496-e2a98b3716a6)
+![Screenshot 2023-09-22 170116](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/bae7d859-21d7-4622-81f2-683538c4c3f5)
+![Screenshot 2023-09-22 170110](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/84e1cad4-3c3f-494d-b77d-d910556feb1b)
+![Screenshot 2023-09-22 170056](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/cdad023a-57a2-42fe-a737-30400d47e248)
+![Screenshot 2023-09-22 170044](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/7c7b4026-b721-4d2b-89aa-77a308e09ec8)
+![Screenshot 2023-09-22 170029](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/402e7d07-df60-4c51-8953-5604e8758c9f)
+![Screenshot 2023-09-22 165910](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/219e2aa5-4faa-494b-9ffc-e82024960161)
+![Screenshot 2023-09-22 165859](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/fe6cf4a2-b3a7-4fe7-be7e-835fc9127a4d)
+![Screenshot 2023-09-22 165846](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/4443642f-ca94-4fa8-bed2-08085fe0924d)
+![Screenshot 2023-09-22 165759](https://github.com/MavenCoding157/Quantum-CSGO-Menu/assets/117538886/e67f50c3-adcb-4a26-8492-2148978505d5)
 
 
 # **UPDATE LOG**
 
-18/09/2023: Added basic bypass feature (erase PE Headers, etc)
+22/09/2023: added UI stuff e.g. future features list and etc
+
+18/09/2023: added basic bypass feature (erase PE Headers, etc)
 
 18/09/2023: added UI stuff e.g. flashing text etc
 
