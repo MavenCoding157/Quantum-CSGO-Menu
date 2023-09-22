@@ -97,11 +97,11 @@ Link to original menu style: https://github.com/cazzwastaken/externalia
 
 • TriggerBot ✔️
 
-• Anit-AFK ✔️
+• Anti-AFK ✔️
 
 • Aimbot ✔️
 
-• Basic skin changer (basically never works) ✔️
+• Basic skin changer (works but is buggy) ✔️
 
 • RCS (Recoil Control System) [coming soon] ❌
 
