@@ -37,13 +37,8 @@ namespace globals
 
 	inline bool RCS = false; //del
 
-	inline bool free_cam = false;//del
-
 	inline bool Spectators = false;
 
-	inline bool Fakelag = false;//del
-
-	inline bool WalkBot = false;//del
 }
 
 class skinchanger //and Some extra Stuff credit to whoever made CSGO Multihack on github
@@ -82,7 +77,6 @@ namespace checkboxes
 	//checkboxes (todo)
 	inline bool Blockreports = false;
 }
-
 
 namespace offsets 
 {

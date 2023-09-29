@@ -3,7 +3,7 @@
 #include "hacks.h"
 #include <thread>
 #include <iostream>
-#include "../DiscordRpc/Class/Discord.h"//del
+#include "../DiscordRpc/Class/Discord.h"
 #include "antiAC.h"
 
 //discord thing idk

@@ -9,7 +9,7 @@
 #include <corecrt_math.h>
 #include "../font/icons.h"
 #include "../font/font.h"
-#include "../DiscordRpc/Class/Discord.h"//del
+#include "../DiscordRpc/Class/Discord.h"
 
 #include <windows.h>
 #include <shellapi.h>
@@ -21,6 +21,7 @@
 #include <Lmcons.h>
 #include <chrono>
 #include <cmath>
+#include <vector>//del
 
 
 extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(
@@ -352,11 +353,6 @@ int buttonPressCount = 0;
 int status = system("tasklist | find /i \"csgo.exe\" > nul");
 
 //bools
-bool logged = false;
-char inputusername;
-char inputpassword;
-std::string password = "root";
-
 static bool circleshowing = true;//del
 static bool fovcircle = false;//del
 static float circlesize = 450;//del
@@ -491,7 +487,6 @@ void gui::Render() noexcept
 			if (ImGui::Button("Other", { ImGui::GetContentRegionAvail().x, button_height })) { current_tab = 3; }
 			ImGui::Spacing();
 
-
 			if (ImGui::Button("Future Features", { ImGui::GetContentRegionAvail().x, button_height })) { current_tab = 4; }
 			ImGui::Spacing();
 
@@ -620,7 +615,7 @@ void gui::Render() noexcept
 
 				ImGui::Toggle("Recoil Control", &globals::RCS);
 				if (ImGui::IsItemHovered())
-					ImGui::SetTooltip("RCS [BETA] (Kinda works idk)");
+					ImGui::SetTooltip("RCS [BETA] (Doesnt work atm)");
 				ImGui::Spacing();
 
 				ImGui::Text("Dont run aimbot and triggerbot at the \nsame time other wise it might not work.");
@@ -674,10 +669,6 @@ void gui::Render() noexcept
 					if (ImGui::IsItemHovered())
 						ImGui::SetTooltip("Makes it so you cant go idle");
 					ImGui::Spacing();
-					ImGui::Toggle("Free Cam", &globals::free_cam);
-					if (ImGui::IsItemHovered())
-						ImGui::SetTooltip("You are able to fly around the map in a different camera mode");
-					ImGui::Spacing();
 					if (ImGui::Button("Spectators List [BETA")) {
 						openNewWindow = true; // Set the flag to true when the button is pressed
 					}
@@ -695,11 +686,6 @@ void gui::Render() noexcept
 						// Add content to your new window here
 						ImGui::End();
 					}
-
-					ImGui::Spacing();
-					ImGui::Toggle("Walk Bot", &globals::WalkBot);
-					if (ImGui::IsItemHovered())
-						ImGui::SetTooltip("Coming Soon...");
 					
 				}
 				ImGui::EndChild();
@@ -727,10 +713,6 @@ void gui::Render() noexcept
 
 					ImGui::Spacing();
 					ImGuiPP::CenterText("Extra Features", 1, TRUE);
-					ImGui::Spacing();
-					ImGui::Button("Fake-Lag [BETA]");
-					if (ImGui::IsItemHovered())
-						ImGui::SetTooltip("Coming Soon...");
 					ImGui::Spacing();
 					ImGui::Button("Coming Soon...");
 					if (ImGui::IsItemHovered())

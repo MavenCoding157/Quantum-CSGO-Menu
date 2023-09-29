@@ -273,6 +273,7 @@ void hacks::VisualsThread(const Memory& mem) noexcept
 			}
 
 			//(for RCS)
+			//doesnt work RN
 			auto oldPunch = Vector2{ };
 
 			if (globals::RCS)
@@ -282,8 +283,8 @@ void hacks::VisualsThread(const Memory& mem) noexcept
 
 				const auto& aimPunch = mem.Read<Vector2>(localPlayer + offsets::m_aimPunchAngle);
 				//2, 0 , 0.01
-				const float x = 2 - g_Options.recoil_smooth_x[0] * 0.01f;
-				const float y = 2 - g_Options.recoil_smooth_y[0] * 0.01f;
+				const float x = 0 - g_Options.recoil_smooth_x[0] * 0.f;
+				const float y = 0 - g_Options.recoil_smooth_y[0] * 0.f;
 
 				auto newAngles = Vector2{
 					viewAngles.x + oldPunch.x - aimPunch.x * x,
@@ -309,12 +310,7 @@ void hacks::VisualsThread(const Memory& mem) noexcept
 			}
 			else
 			{
-				oldPunch.x = oldPunch.y = 0.f;
-			}
-
-			if (globals::free_cam)
-			{
-				//coming soon
+				oldPunch.x = oldPunch.y = 0.f;//0.f
 			}
 
 			if (globals::Spectators)
@@ -322,15 +318,6 @@ void hacks::VisualsThread(const Memory& mem) noexcept
 				//coming soon
 			}
 
-			if (globals::Fakelag)
-			{
-				//coming soon
-			}
-
-			if (globals::WalkBot)
-			{
-				//coming soon
-			}
 		}
 	}
 }
